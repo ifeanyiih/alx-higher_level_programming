@@ -8,7 +8,7 @@
 */
 int check_cycle(listint_t *list)
 {
-	listint_t p, q;
+	listint_t *p, *q;
 
 	p = q = list;
 	while (p != NULL)
