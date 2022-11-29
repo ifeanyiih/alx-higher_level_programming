@@ -21,3 +21,4 @@ Below is a list of files in this directory
 **8-uppercase.py**: a function the prints strings in uppercase
 **9-print_last_digit.py**: a function that prints the last digit of a number.
 **10-add.py**: a function that adds two integers and returns the result.
+**11-pow.py**: a function that computes a to the power of b and return the value.
