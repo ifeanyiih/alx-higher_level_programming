@@ -19,3 +19,4 @@ Below is a list of files in this directory
 **6-print_comb3.py**: a program that prints all possible different combinations of two digits.
 **7-islower.py**: a program that checks for lowercase character.
 **8-uppercase.py**: a function the prints strings in uppercase
+**9-print_last_digit.py**: a function that prints the last digit of a number.
