@@ -20,3 +20,4 @@ Below is a list of files in this directory
 **7-islower.py**: a program that checks for lowercase character.
 **8-uppercase.py**: a function the prints strings in uppercase
 **9-print_last_digit.py**: a function that prints the last digit of a number.
+**10-add.py**: a function that adds two integers and returns the result.
