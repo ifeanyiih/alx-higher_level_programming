@@ -13,8 +13,12 @@ int check_cycle(listint_t *list)
 	p = q = list;
 	while (p != NULL && q != NULL)
 	{
-		p = p->next->next;
 		q = q->next;
+
+		p = p->next;
+		if (p == NULL)
+				return (0);
+		p = p->next;
 		if (p == q)
 			return (1);
 	}
