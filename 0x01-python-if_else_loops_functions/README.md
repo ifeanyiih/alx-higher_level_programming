@@ -16,3 +16,4 @@ Below is a list of files in this directory
 **3-print_alphabt.py**: a program that prints the ASCII alphabet, in lowercase, excluding q and e
 **4-print_hexa.py**: a program that prints all numbers from 0 to 98 in decimal and in hexadecimal
 **5-print_comb2.py**: a program that prints numbers from 0 to 99
+**6-print_comb3.py**: a program that prints all possible different combinations of two digits.
