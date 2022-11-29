@@ -23,3 +23,4 @@ Below is a list of files in this directory
 - **10-add.py**: a function that adds two integers and returns the result.
 - **11-pow.py**: a function that computes a to the power of b and return the value.
 - **12-fizzbuzz.py**:  a function that prints the numbers from 1 to 100 separated by a space.
+- **13-insert_number.c**: a function in C that inserts a number into a sorted singly linked list.
