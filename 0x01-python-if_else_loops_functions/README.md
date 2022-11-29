@@ -13,4 +13,4 @@ Below is a list of files in this directory
 **0-positive_or_negative.py**: This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.
 **1-last_digit.py**: complete source code
 **2-print_alphabet.py**:  a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
-
+**3-print_alphabt.py**: a program that prints the ASCII alphabet, in lowercase, excluding q and e
