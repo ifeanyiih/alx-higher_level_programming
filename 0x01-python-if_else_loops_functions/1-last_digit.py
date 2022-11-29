@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-rem = number % 10
-print(f"Last digit of {number} is {rem}", end=" ")
+if number < 0:
+    sign = -1
+else:
+    sign = 1
+rem = (number * sign) % 10
+print(f"Last digit of {number} is {rem * sign}", end=" ")
 if rem == 0:
     print(f"and is 0")
 elif rem < 6:
