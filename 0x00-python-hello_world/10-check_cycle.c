@@ -8,14 +8,14 @@
 */
 int check_cycle(listint_t *list)
 {
-	listint_t *p, *q;
+	listint_t *p;
 
-	p = q = list;
+	p = list;
 	while (p != NULL)
 	{
 		p = p->next->next;
-		q = q->next;
-		if (p == q)
+		list = list->next;
+		if (p == list)
 			return (1);
 	}
 	return (0);
