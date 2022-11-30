@@ -26,4 +26,4 @@ Below is a list of files in this directory
 - **13-insert_number.c**: a function in C that inserts a number into a sorted singly linked list.
 - **100-print_tebahpla.py**:  a program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) 
 - **101-remove_char_at.py**: a function that creates a copy of the string, removing the character at the position n
-
+- **102-magic_calculation.py**: code from python bytecode
