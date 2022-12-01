@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -m py_compile $PYFILE; mv __pycache__/"$(ls __pycache__)" ./
+disown $(python3 -m py_compile $PYFILE; declare -g PYFILEc; declare -g PYFILEc=$(ls __pycache__);mv __pycache__/"$PYFILEc" ./)
