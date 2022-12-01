@@ -5,7 +5,7 @@ from calculator_1 import add, sub, mul, div
 
 def calculate(args):
     if not len(args) == 4:
-        print(f"Usage: {arg[0]} a operator b")
+        print(f"Usage: {args[0]} a operator b")
         exit(1)
 
     op = args[2]
@@ -34,4 +34,4 @@ def exit(status):
 
 
 if __name__ == '__main__':
-    calculate(sys.args)
+    calculate(sys.argv)
