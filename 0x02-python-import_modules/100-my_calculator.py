@@ -9,8 +9,8 @@ def calculate(args):
         exit(1)
 
     op = args[2]
-    a = args[1]
-    b = args[3]
+    a = int(args[1])
+    b = int(args[3])
 
     if op == '+':
         print(f"{a} + {b} = {add(a, b)}")
