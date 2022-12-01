@@ -19,10 +19,10 @@ def calculate(args):
         print(f"{a} - {b} = {sub(a, b)}")
         exit(0)
     elif op == '*':
-        print(f"{a} - {b} = {mul(a, b)}")
+        print(f"{a} * {b} = {mul(a, b)}")
         exit(0)
     elif op == '/':
-        print(f"{a} - {b} = {div(a, b)}")
+        print(f"{a} / {b} = {div(a, b)}")
         exit(0)
     else:
         print(f"Unknown operator. Available operators: +, -, * and /")
