@@ -9,3 +9,4 @@ Below is a list of files in this directory.
 - **1-calculation.py**: import functions from a file and exe
 - **2-arg.py**: a program that prints the number of and the list of its arguments.
 - **3-infinite_add.py**: a program that prints the result of the addition of all arguments
+- **4-hidden_discovery.py**: a program that prints all the names defined by the compiled module hidden_4.pyc 
