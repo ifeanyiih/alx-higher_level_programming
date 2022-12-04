@@ -16,4 +16,5 @@ Below is a list of files in this directory.
 - **9-max_integer.py**:  a function that finds the biggest integer of a list.
 - **10-divisible_by_2.py**: a function that finds all multiples of 2 in a list.
 - **11-delete_at.py**: a function that deletes the item at a specific position in a list.
+- **12-switch.py**: Complete the source code in order to switch value of a and b
 - **13-is_palindrome.c**: a function in C that checks if a singly linked list is a palindrome.
