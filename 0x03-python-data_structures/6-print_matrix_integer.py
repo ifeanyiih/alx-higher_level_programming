@@ -7,5 +7,5 @@ def print_matrix_integer(matrix=[[]]):
                 for i in row:
                     print("{:d}".format(i), end=" ")
                 print()
-            else:
-                print("{}".format(row))
+            elif type(row) is int:
+                print("{:d}".format(row))
