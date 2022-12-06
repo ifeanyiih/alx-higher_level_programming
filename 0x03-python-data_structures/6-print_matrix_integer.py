@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
-    if matrix not None and len(matrix) > 0:
+    if matrix is not None:
         for row in matrix:
-            if type(row) == list:
-                for i in row:
-                    print("{:d}".format(i), end=" ")
-                print()
-            elif type(row) is int:
-                print("{:d}".format(row))
+            for i in row:
+                print("{:d}".format(i), end="");
+            print()
