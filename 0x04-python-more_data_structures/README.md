@@ -12,3 +12,4 @@ Below is a list of files in this directory.
 - **5-number_keys.py**: a function that returns the number of keys in a dictionary.
 - **6-print_sorted_dictionary.py**: a function that prints a dictionary by ordered keys.
 - **7-update_dictionary.py**: a function that replaces or adds key/value in a dictionary.
+- **8-simple_delete.py**:  a function that deletes a key in a dictionary.
