@@ -13,4 +13,5 @@ Below is a list of files in this directory.
 - **5-variable_load.py**: a program that imports the variable a from the file variable_load_5.py and prints its value.
 - **100-my_calculator.py**: a program that imports all functions from the file calculator_1.py and handles basic operations.
 - **101-easy_print.py**:  a program that prints #pythoniscool, followed by a new line
+- **102-magic_calculation.py**: Python function def magic_calculation(a, b): that does exactly the same as the given Python Bytecode
 - **103-fast_alphabet.py**: a program that prints the alphabet in uppercase, followed by a new line.
