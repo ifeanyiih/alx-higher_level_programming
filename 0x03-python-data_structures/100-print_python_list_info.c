@@ -9,12 +9,12 @@ void print_python_list_info(PyObject *p)
 {
 	unsigned int i, j;
 	PyObject *item;
-
+	
 	if (PyList_CheckExact(p))
 	{
 		i = PyList_Size(p);
 		printf("[*] Size of the Python List = %u\n", i);
-		printf("[*] Allocated = %u\n", (unsigned int)Py_REFCNT(p));
+		printf("[*] Allocated = %u\n", (unsigned int)Py_SIZE(p));
 		for (j = 0; j < i; ++j)
 		{
 			item = PyList_GetItem(p, j);
