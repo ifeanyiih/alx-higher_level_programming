@@ -14,3 +14,4 @@ Below is a list of files in this directory.
 - **7-update_dictionary.py**: a function that replaces or adds key/value in a dictionary.
 - **8-simple_delete.py**:  a function that deletes a key in a dictionary.
 - **9-multiply_by_2.py**: a function that returns a new dictionary with all values multiplied by 2
+- **10-best_score.py**: a function that returns a key with the biggest integer value.
