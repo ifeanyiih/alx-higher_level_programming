@@ -17,7 +17,7 @@ class Square:
         Args:
             size(int): size of a square
         """
-        if not type(size) == int:
+        if not (type(size) == int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
@@ -30,8 +30,13 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """size setter"""
-        if not type(value) == int:
+        """size setter
+        Sets the __size attribute
+
+        Args:
+            value(int): value to set to
+        """
+        if not (type(value) == int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
