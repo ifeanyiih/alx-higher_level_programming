@@ -6,9 +6,6 @@ def safe_print_division(a, b):
         result = a / b
         return result
     except Exception:
-        pass
+        result = None
     finally:
-        if result == 0:
-            result = None
         print("Inside result: {}".format(result))
-
