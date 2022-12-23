@@ -5,8 +5,8 @@ import sys
 def safe_print_integer_err(value):
     rslt = True
     try:
-        sys.stderr("{:d}".format(value))
-    except Exception:
-        rslt = False
-    finally:
-        return rslt
+        print("{:d}".format(value))
+        return True
+    except Exception as e:
+        print(e)
+    return False
