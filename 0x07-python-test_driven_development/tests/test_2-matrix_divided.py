@@ -5,8 +5,11 @@ Unit tests for Module demonstrating the division of
 matrix elements
 """
 
+import sys
 from importlib import import_module
 import unittest
+
+sys.path.insert(1, '../')
 
 class MatrixTestCase(unittest.TestCase):
     def setUp(self):

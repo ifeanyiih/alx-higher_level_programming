@@ -4,8 +4,10 @@
 Unit test for module 0-add_integer
 """
 
+import sys
 import unittest
 from importlib import import_module
+sys.path.insert(1, '../')
 
 
 class ModuleTestCase(unittest.TestCase):
