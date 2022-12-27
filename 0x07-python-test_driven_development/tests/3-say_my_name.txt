@@ -1,0 +1,24 @@
+The 3-say_my_name module doctest
+===============================
+
+This module function 'say_my_name' prints <first name> <last name>
+to stdout
+
+First:
+Import the necessary modules to run the test
+	>>> from importlib import import_module
+	>>> say_my_name = import_module('3-say_my_name').say_my_name
+
+Now to use it:
+	>>> say_my_name("Sizwe", "Bansi")
+	My name is Sizwe Bansi
+
+	>>> say_my_name("John", 20)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+	>>> say_my_name(20, "Smith")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
