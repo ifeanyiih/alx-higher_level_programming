@@ -1,0 +1,21 @@
+Doctests for the Module '4-print_square.py'
+=========================================
+
+Import what is needed:
+	>>> from importlib import import_module
+	>>> print_square = import_module('4-print_square').print_square
+
+Run the tests:
+	>>> print_square('a')
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+	>>> print_square(-1)
+	Traceback (most recent call last):
+		...
+	ValueError: size must be >= 0
+
+	>>> print_square(2)
+	##
+	##
