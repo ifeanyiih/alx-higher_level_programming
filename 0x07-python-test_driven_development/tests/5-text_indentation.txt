@@ -1,0 +1,21 @@
+Doc test for Module '5-text_indentation'
+======================================
+
+Import what's needed:
+	>>> from importlib import import_module
+	>>> text_indentation = import_module('5-text_indentation').text_indentation
+
+Now to run the tests:
+	>>> text_indentation(2)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+	>>> text = "What are those? They look nice."
+	>>> text_indentation(text)
+	What are those?
+	<BLANKLINE>
+	They look nice.
+	<BLANKLINE>
+
+
