@@ -6,8 +6,7 @@ to stdout
 
 First:
 Import the necessary modules to run the test
-	>>> from importlib import import_module
-	>>> say_my_name = import_module('3-say_my_name').say_my_name
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
 
 Now to use it:
 	>>> say_my_name("Sizwe", "Bansi")

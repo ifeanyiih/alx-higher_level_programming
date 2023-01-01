@@ -2,8 +2,7 @@ Doc test for Module '5-text_indentation'
 ======================================
 
 Import what's needed:
-	>>> from importlib import import_module
-	>>> text_indentation = import_module('5-text_indentation').text_indentation
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Now to run the tests:
 	>>> text_indentation(2)

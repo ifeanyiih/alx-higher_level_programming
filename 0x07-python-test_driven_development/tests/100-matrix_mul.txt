@@ -1,0 +1,72 @@
+Tests for the Module: 100-matrix_mul
+===================================
+
+First make necessary imports:
+============================
+
+	
+	>>> mA = [[1, 2], [3, 4]]
+	>>> mB = [[1, 2], [3, 4]]
+	>>> mC = [[1, 2, 3], [1, 2, 3]]
+	>>> mD = [[2, 4, 6], [1, 2, 3]]
+	>>> mE = [[1, 2], 3]
+	>>> mF = [[1, 'b'], ['a', 'c']]
+
+	>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+	>>> print(matrix_mul(mA, mB))
+	[[7, 10], [15, 22]]
+
+	>>> matrix_mul(mC, mD)
+	Traceback (most recent call last):
+		...
+	ValueError: m_a and m_b can't be multiplied
+
+	>>> matrix_mul(mE, mE)
+	Traceback (most recent call last):
+		...
+	TypeError: m_a must be a list of lists
+
+	>>> matrix_mul(mB, mE)
+	Traceback (most recent call last):
+		...
+	TypeError: m_b must be a list of lists
+
+	>>> matrix_mul(mF, mB)
+	Traceback (most recent call last):
+		...
+	TypeError: m_a should contain only integers or floats
+
+	>>> matrix_mul(mB, mF)
+	Traceback (most recent call last):
+		...
+	TypeError: m_b should contain only integers or floats
+
+	>>> matrix_mul({1, 2}, mB)
+	Traceback (most recent call last):
+		...
+	TypeError: m_a must be a list
+
+	>>> matrix_mul(mB, (1, 2))
+	Traceback (most recent call last):
+		...
+	TypeError: m_b must be a list
+
+	>>> matrix_mul([], mB)
+	Traceback (most recent call last):
+		...
+	ValueError: m_a can't be empty
+
+	>>> matrix_mul(mB, [])
+	Traceback (most recent call last):
+		...
+	ValueError: m_b can't be empty
+
+	>>> matrix_mul(mB, [[]])
+	Traceback (most recent call last):
+		...
+	ValueError: m_b can't be empty
+
+	>>> matrix_mul([[]], mB)
+	Traceback (most recent call last):
+		...
+	ValueError: m_a can't be empty
