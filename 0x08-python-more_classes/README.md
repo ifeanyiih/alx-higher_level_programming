@@ -11,3 +11,4 @@ Below is a list of files in this directory.
 - **4-rectangle.py**: A class Rectangle that defines a rectangle by (based on **3-rectangle.py**)
 - **5-rectangle.py**: A class Rectangle that ... (based on **4-rectangle.py**)
 - **6-rectangle.py**: A class Rectangle that ... (based on **5-rectangle.py**)
+- **7-rectangle.py**: A class Rectangle that ... (based on **6-rectangle.py**)
