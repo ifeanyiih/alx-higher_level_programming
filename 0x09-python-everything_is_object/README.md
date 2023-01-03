@@ -12,3 +12,14 @@ Below is a list of files in this directory.
 - **5-answer.txt**: Yes or No
 - **6-answer.txt**:
 - **7-answer.txt**:
+- **8-answer.txt**;
+- **9-answer.txt**;
+- **10-answer.txt**;
+- **11-answer.txt**;
+- **12-answer.txt**;
+- **13-answer.txt**;
+- **14-answer.txt**;
+- **15-answer.txt**;
+- **16-answer.txt**;
+- **17-answer.txt**;
+- **18-answer.txt**;
