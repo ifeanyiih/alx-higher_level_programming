@@ -5,3 +5,4 @@ Below is a list of files in this directory.
 
 ---
 - **0-answer.txt**: What function would you use to print the type of an object
+- **1-answer.txt**: How do you get the variable identifier
