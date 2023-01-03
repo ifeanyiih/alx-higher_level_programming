@@ -8,3 +8,7 @@ Below is a list of files in this directory.
 - **1-answer.txt**: How do you get the variable identifier
 - **2-answer.txt**: Yes or No
 - **3-answer.txt**: Yes or No
+- **4-answer.txt**: Yes or No
+- **5-answer.txt**: Yes or No
+- **6-answer.txt**:
+- **7-answer.txt**:
