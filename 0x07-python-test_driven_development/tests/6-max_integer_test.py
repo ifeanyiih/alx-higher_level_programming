@@ -18,13 +18,6 @@ class TestMax_integerFunction(unittest.TestCase):
     def test_correct_type(self):
         """Tests for correct type"""
         pass
-        #self.assertRaises(TypeError, max_integer, {1, 2, 3})
-        #self.assertRaises(TypeError, max_integer, {'a': 1})
-        #self.assertRaises(TypeError, max_integer, None)
-        #self.assertRaises(TypeError, max_integer, (1, 2))
-        #self.assertRaises(TypeError, max_integer, 299)
-        #self.assertRaises(TypeError, max_integer, 10.0)
-        #self.assertRaises(TypeError, max_integer, "max")
 
     def test_correct_return_value(self):
         """Tests for correct return output"""
