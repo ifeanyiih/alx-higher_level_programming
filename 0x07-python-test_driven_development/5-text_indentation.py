@@ -34,7 +34,7 @@ def text_indentation(text):
         if cpy[i] in '.?:':
             print()
             print()
-            j = i + 1 + 1
+            j = i + 1
             while (j < len(cpy) and cpy[j] == ' '):
                 j += 1
             i = j
