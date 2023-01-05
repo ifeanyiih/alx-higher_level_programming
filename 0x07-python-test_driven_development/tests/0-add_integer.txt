@@ -52,3 +52,6 @@ Now use it:
 	Traceback (most recent call last):
 		...
 	ValueError: cannot convert float NaN to integer
+
+	>>> add_integer(2)
+	100
