@@ -7,6 +7,7 @@ with format:
     My name is <first name> <last name>
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     Function prints string in format:
