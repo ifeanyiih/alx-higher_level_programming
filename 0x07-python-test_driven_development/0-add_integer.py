@@ -4,6 +4,7 @@
 Module to demonstrate adding integers
 """
 
+
 def add_integer(a, b=98):
     """This function adds to integers together
 
