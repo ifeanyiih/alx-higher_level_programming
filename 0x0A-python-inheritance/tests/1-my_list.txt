@@ -20,3 +20,11 @@ Execute Tests
 
 	>>> my_list
 	[1, 5, 3, 4, 2]
+
+	>>> m = MyList()
+
+	>>> m
+	[]
+
+	>>> m.print_sorted()
+	[]

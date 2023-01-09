@@ -4,6 +4,7 @@
 Module contains a class that inherits from list
 """
 
+
 class MyList(list):
     """
     Inherits from a list
