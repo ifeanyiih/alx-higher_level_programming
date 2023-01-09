@@ -8,3 +8,4 @@ Below is a list of files in this directory:
 ---
 
 - **0-lookup.py**: a function that returns the list of available attributes and methods of an object
+- **1-my_list.py**: a class that inherits from a list
