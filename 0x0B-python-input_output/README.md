@@ -15,3 +15,4 @@ Below is a list of files in this directory:
 - **6-load_from_json_file.py**: a function that creates an Object from a “JSON file
 - **7-add_item.p**: a script that adds all arguments to a Python list, and then save them to a file:
 - **8-class_to_json.py**: a function that returns the dictionary description with simple data structure
+- **9-student.py**: a class that defines a Student with a first_name, last_name and age
