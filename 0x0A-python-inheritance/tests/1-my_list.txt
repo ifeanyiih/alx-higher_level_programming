@@ -38,3 +38,7 @@ Execute Tests
 	>>> m.append(-1)
 	>>> m.print_sorted()
 	[-1]
+
+	>>> n = MyList()
+	>>> n.print_sorted(-1)
+	[]
