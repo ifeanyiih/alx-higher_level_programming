@@ -33,3 +33,11 @@ Execute Tests
 
 	>>> m.print_sorted()
 	[-3, 0, 1, 2]
+
+	>>> m = MyList()
+	>>> m.append(-4)
+	>>> m.append(-2)
+	>>> m.append(-3)
+	>>> m.append(-1)
+	>>> m.print_sorted()
+	[-4, -3, -2, -1]
