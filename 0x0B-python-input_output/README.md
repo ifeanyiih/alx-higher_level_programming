@@ -10,3 +10,4 @@ Below is a list of files in this directory:
 - **1-write_file.py**: a function that writes a string to a text file (UTF8) and returns the number of characters written:
 - **2-append_write.py**: a function that appends a text to a file
 - **3-to_json_string.py**: a function that returns the JSON representation of an object (string)
+- **4-from_json_string.py**: a function that returns an object (Python data structure) represented by a JSON string
