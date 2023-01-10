@@ -26,5 +26,10 @@ Execute Tests
 	>>> m
 	[]
 
+	>>> m.append(-3)
+	>>> m.append(2)
+	>>> m.append(1)
+	>>> m.append(0)
+
 	>>> m.print_sorted()
-	[]
+	[-3, 0, 1, 2]
