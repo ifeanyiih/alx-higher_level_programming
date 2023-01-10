@@ -14,3 +14,5 @@ Below is a list of files in this directory:
 - **4-inherits_from.py**: a function that returns True if the object is an instance of a class that inherited (directly or indirectly) from the specified class ; otherwise False
 - **5-base_geometry**: an empty class BaseGeometry
 - **6-base_geometry**: a class with an area() public method
+- **7-base_geometry**: a class with an area() public method and integer_validator() public method
+- **test**: tests directory
