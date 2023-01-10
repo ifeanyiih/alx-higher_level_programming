@@ -12,3 +12,4 @@ Below is a list of files in this directory:
 - **3-to_json_string.py**: a function that returns the JSON representation of an object (string)
 - **4-from_json_string.py**: a function that returns an object (Python data structure) represented by a JSON string
 - **5-save_to_json_file.py**:  a function that writes an Object to a text file, using a JSON representation
+- **6-load_from_json_file.py**: a function that creates an Object from a “JSON file
