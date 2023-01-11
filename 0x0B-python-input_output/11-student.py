@@ -37,6 +37,7 @@ class Student:
 
     def reload_from_json(self, json):
         """Reloads a Class from its dictionary representation"""
-        self.first_name = json['first_name']
-        self.last_name = json['last_name']
-        self.age = json['age']
+        if len(json.keys()) != 0:
+            self.first_name = json['first_name']
+            self.last_name = json['last_name']
+            self.age = json['age']
