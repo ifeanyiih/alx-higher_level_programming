@@ -18,3 +18,4 @@ Below is a list of files in this directory:
 - **9-student.py**: a class that defines a Student with a first_name, last_name and age
 - **10-student.py**: a class Student that defines a student by: (based on 9-student.py)
 - **11-student.py**: a class Student that defines a student by: (based on 10-student.py)
+- **12-pascal_triangle**: a function that returns a list of lists of integers representing the Pascal’s triangle of n
