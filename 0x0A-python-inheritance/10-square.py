@@ -7,6 +7,7 @@ from a class Rectangle
 
 Rectangle = __import__("9-rectangle").Rectangle
 
+
 class Square(Rectangle):
     """
     Atrributes:
