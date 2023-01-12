@@ -20,3 +20,4 @@ Below is a list of files in this directory:
 - **9-rectangle.py**:  a class Rectangle that inherits from BaseGeometry (7-base_geometry.py). (task based on 8-rectangle.py)
 - **10-square.py**: a class Square that inherits from Rectangle (9-rectangle.py)
 - **11-squre.py**: a class Square that inherits from Rectangle (9-rectangle.py). (task based on 10-square.py).
+- **100-my_int.py**:  a class MyInt that inherits from int:
