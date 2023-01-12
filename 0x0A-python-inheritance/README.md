@@ -16,3 +16,4 @@ Below is a list of files in this directory:
 - **6-base_geometry**: a class with an area() public method
 - **7-base_geometry**: a class with an area() public method and integer_validator() public method
 - **test**: tests directory
+- **8-rectangle.py**: a class Rectangle that inherits from BaseGeometry (7-base_geometry.py).
