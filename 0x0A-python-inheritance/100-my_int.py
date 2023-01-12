@@ -7,6 +7,7 @@ that inherits from int
 
 
 class MyInt(int):
+    """Inherit from int and make a rogue subclass"""
     def __eq__(self, value):
         """Inverts the equality"""
         return super().__ne__(value)
