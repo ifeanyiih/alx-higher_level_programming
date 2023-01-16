@@ -31,8 +31,23 @@ class RectangleTestCase(unittest.TestCase):
     def test_two_non_optional_args(self):
         """tests if the non-optional arguments are present"""
         rect = Rectangle(40, 50)
-        assertEqual(rect.width, 40)
-        assertEqual(rect.height, 50)
-        assertEqual(rect.x, 0)
-        assertEqual(rect.y, 0)
-        assertEqual(rect.id, 1)
+        self.assertEqual(rect.width, 40)
+        self.assertEqual(rect.height, 50)
+        self.assertEqual(rect.x, 0)
+        self.assertEqual(rect.y, 0)
+        self.assertEqual(rect.id, 1)
+
+    def test_that_arguments_are_int(self):
+        """tests if the arguments are int"""
+        obj = Rectangle(20, 20)
+        self.assertRaises(TypeError, Rectangle(20, "15"))
+        self.assertRaises(TypeError, Rectangle("19", 30))
+        self.assertRaises(TypeError, obj.x = "2")
+        self.assertRaises(TypeError, obj.y = "3")
+
+    def test_that_values_not_negative(self):
+        """tests that argument values are non-negative"""
+        self.assertRaises(ValueError, Rectangle(-50, 20))
+        self.assertRaises(ValueError, Rectangle(20, -50))
+        self.assertRaises(ValueError, Rectangle(20, 30, -3))
+        self.assertRaises(ValueError, Rectangle(20, 30, 5, -3))
