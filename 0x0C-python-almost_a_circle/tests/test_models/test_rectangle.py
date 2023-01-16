@@ -39,3 +39,19 @@ class RectangleTestCase(unittest.TestCase):
         """test the the display method works properly"""
         rect = Rectangle(5, 7)
         self.assertEqual(rect.display(), None)
+
+    def test_the__str__method(self):
+        """test that the obj prints properly"""
+        rect = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(rect.__str__(), "[Rectangle] (12) 2/1 - 4/6")
+
+    def test_the_instance_update_method(self):
+        """tests that the update method works properly"""
+        rect = Rectangle(4, 6)
+        args = [283, 30, 70, 3, 5]
+        rect.update(*args)
+        self.assertEqual(rect.id, 283)
+        self.assertEqual(rect.width, 30)
+        self.assertEqual(rect.height, 70)
+        self.assertEqual(rect.x, 3)
+        self.assertEqual(rect.y, 5)
