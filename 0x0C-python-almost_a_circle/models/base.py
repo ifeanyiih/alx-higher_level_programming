@@ -11,11 +11,13 @@ Imports:
     json: handle JSON data
     os: check for file existence
     csv: to handle csv
+    turtle: to handle drawing shapes with tkinter
 """
 
 import json
 import os
 import csv
+import turtle
 
 
 class Base:
@@ -120,3 +122,47 @@ class Base:
                     obj = cls(row[1], row[2], row[3], row[0])
                 list_objs.append(obj)
         return list_objs
+
+    @staticmethod
+    def draw(list_rect, list_sqr):
+        """that opens a window and draws all the
+        Rectangles and Squares
+        """
+        turtle.delay(50)
+        for rect in list_rect:
+            turtle.begin_poly()
+            turtle.setx(rect.x)
+            turtle.sety(rect.y)
+            turtle.fillcolor('yellow')
+            turtle.begin_fill()
+            turtle.pd()
+            turtle.fd(rect.width)
+            turtle.right(90)
+            turtle.fd(rect.height)
+            turtle.right(90)
+            turtle.fd(rect.width)
+            turtle.right(90)
+            turtle.fd(rect.height)
+            turtle.end_poly()
+            turtle.pu()
+            turtle.end_fill()
+            turtle.setpos(0, 0)
+        for sq in list_sqr:
+            turtle.begin_poly()
+            turtle.setx(sq.x)
+            turtle.sety(sq.y)
+            turtle.fillcolor('red')
+            turtle.begin_fill()
+            turtle.pd()
+            turtle.fd(sq.size)
+            turtle.right(90)
+            turtle.fd(sq.size)
+            turtle.right(90)
+            turtle.fd(sq.size)
+            turtle.right(90)
+            turtle.fd(sq.size)
+            turtle.end_poly()
+            turtle.pu()
+            turtle.end_fill()
+            turtle.setpos(0, 0)
+        turtle.exitonclick()
