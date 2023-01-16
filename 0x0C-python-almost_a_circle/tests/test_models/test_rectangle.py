@@ -23,9 +23,19 @@ class RectangleTestCase(unittest.TestCase):
 
     def test_two_non_optional_args(self):
         """tests if the non-optional arguments are present"""
-        rect = Rectangle(40, 50)
+        rect = Rectangle(40, 50, id=3)
         self.assertEqual(rect.width, 40)
         self.assertEqual(rect.height, 50)
         self.assertEqual(rect.x, 0)
         self.assertEqual(rect.y, 0)
-        self.assertEqual(rect.id, 2)
+        self.assertEqual(rect.id, 3)
+
+    def test_Rectangle_area_method(self):
+        """test that the area method works normally"""
+        rect = Rectangle(20, 50, 3, 5, 1888)
+        self.assertEqual(rect.area(), 1000)
+
+    def test_Rectangle_display(self):
+        """test the the display method works properly"""
+        rect = Rectangle(5, 7)
+        self.assertEqual(rect.display(), None)
