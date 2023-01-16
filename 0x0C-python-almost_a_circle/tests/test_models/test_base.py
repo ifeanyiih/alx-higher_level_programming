@@ -9,9 +9,8 @@ Imports:
 """
 
 import unittest
-Base = __import__('../../models/base').Base
+from models.base import Base
 
-print(Base)
 class BaseTestCase(unittest.TestCase):
     """Test for the class Base from Module base.py"""
     def test_fail(self):
