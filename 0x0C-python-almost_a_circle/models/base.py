@@ -10,10 +10,12 @@ to avoid duplicating the same code (by extension, same bugs)
 Imports:
     json: handle JSON data
     os: check for file existence
+    csv: to handle csv
 """
 
 import json
 import os
+import csv
 
 
 class Base:
@@ -81,3 +83,40 @@ class Base:
             for load in loaded:
                 arr.append(cls.create(**load))
             return arr
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Saves to a CSV file in the format
+
+        Rectangle:
+            <id>,<width>,<height>,<x>,<y>
+        Square:
+            <id>,<size>,<x>,<y>
+        """
+        with open(f"{cls.__name__}.csv", "w", encoding="utf-8") as f:
+            writer = csv.writer(f, delimiter=",")
+            cls.create()
+            if cls.__name__ == "Rectangle":
+                for obj in list_objs:
+                    writer.writerow([obj.id, obj.width,
+                                    obj.height, obj.x, obj.y])
+            if cls.__name__ == "Square":
+                for obj in list_objs:
+                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Loads from a CSV file
+        And returns a list of obj instances
+        """
+        list_objs = []
+        with open(f"{cls.__name__}.csv", "r", encoding="utf-8") as f:
+            reader = csv.reader(f, delimiter=",")
+            for row in reader:
+                row = list(map(lambda i: int(i), row))
+                if cls.__name__ == "Rectangle":
+                    obj = cls(row[1], row[2], row[3], row[4], row[0])
+                if cls.__name__ == "Square":
+                    obj = cls(row[1], row[2], row[3], row[0])
+                list_objs.append(obj)
+        return list_objs
