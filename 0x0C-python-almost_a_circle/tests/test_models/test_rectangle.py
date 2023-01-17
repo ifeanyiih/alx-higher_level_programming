@@ -72,3 +72,10 @@ class RectangleTestCase(unittest.TestCase):
         self.assertEqual(rect.id, 283)
         self.assertEqual(rect.width, 30)
         self.assertEqual(rect.height, 70)
+
+    def test_instance_method_to_dictionary(self):
+        """tests that the method to_dictionary works properly"""
+        rect = Rectangle(22, 30, id=77)
+        obj = rect.to_dictionary()
+        self.assertTrue(obj ==
+                        {'x': 0, 'y': 0, 'width': 22, 'height': 30, 'id': 77})
