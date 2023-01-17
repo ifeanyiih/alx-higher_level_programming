@@ -3,6 +3,10 @@
 """
 Module: test_rectangle.py
 Module contains Unittest Case for Module: base.py
+Imports:
+    unittest: unittest module
+    Base: Parent class
+    Rectangle: module to test
 """
 
 import unittest
@@ -55,3 +59,16 @@ class RectangleTestCase(unittest.TestCase):
         self.assertEqual(rect.height, 70)
         self.assertEqual(rect.x, 3)
         self.assertEqual(rect.y, 5)
+
+        arg_dict = {'width': 30, 'height': 40, 'x': 3, 'y': 4, 'id': 23}
+        rect.update(**arg_dict)
+        self.assertEqual(rect.id, 23)
+        self.assertEqual(rect.width, 30)
+        self.assertEqual(rect.height, 40)
+        self.assertEqual(rect.x, 3)
+        self.assertEqual(rect.y, 4)
+
+        rect.update(*args, **arg_dict)
+        self.assertEqual(rect.id, 283)
+        self.assertEqual(rect.width, 30)
+        self.assertEqual(rect.height, 70)
