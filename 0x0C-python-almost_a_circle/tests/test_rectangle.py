@@ -24,6 +24,15 @@ class RectangleTestCase(unittest.TestCase):
         """test that object is instance of Rectangle"""
         rect = Rectangle(20, 30)
         self.assertIsInstance(rect, Rectangle)
+        self.assertEqual(rect.width, 20)
+        self.assertEqual(rect.height, 30)
+        self.assertEqual(rect.x, 0)
+        self.assertEqual(rect.y, 0)
+
+        rect = Rectangle(20, 30, 15)
+        self.assertEqual(rect.width, 20)
+        self.assertEqual(rect.height, 30)
+        self.assertEqual(rect.x, 15)
 
     def test_two_non_optional_args(self):
         """tests if the non-optional arguments are present"""
@@ -38,6 +47,17 @@ class RectangleTestCase(unittest.TestCase):
         """test that the area method works normally"""
         rect = Rectangle(20, 50, 3, 5, 1888)
         self.assertEqual(rect.area(), 1000)
+
+    def test_for_correct_errors(self):
+        """tests that correct errors are raised"""
+        self.assertRaises(TypeError, Rectangle, "20", 30)
+        self.assertRaises(TypeError, Rectangle, 20, "30")
+        self.assertRaises(TypeError, Rectangle, 20, 30, "5")
+        self.assertRaises(TypeError, Rectangle, 20, 30, 5, "8")
+        self.assertRaises(ValueError, Rectangle, 0, 20)
+        self.assertRaises(ValueError, Rectangle, 20, 0)
+        self.assertRaises(ValueError, Rectangle, 20, 30, -5)
+        self.assertRaises(ValueError, Rectangle, 20, 30, 5, -3)
 
     def test_Rectangle_display(self):
         """test the the display method works properly"""
