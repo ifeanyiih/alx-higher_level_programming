@@ -76,3 +76,9 @@ class SquareTestCase(unittest.TestCase):
         sq.update(*args, **args_dict)
         self.assertEqual(sq.size, 40)
         self.assertEqual(sq.id, 50)
+
+    def test_instance_method_to_dictionary(self):
+        """tests that the instance method to_dictionary workds properly"""
+        sq = Square(33, id=24)
+        ob = sq.to_dictionary()
+        self.assertTrue(ob == {'id': 24, 'size': 33, 'x': 0, 'y': 0})
