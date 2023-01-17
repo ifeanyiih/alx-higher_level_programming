@@ -4,7 +4,7 @@
 Module: test_base.py
 Unit Tests for Module: base.py
 Imports:
-    unittest:
+    unittest: unittest module
     base: the module to test
 """
 
