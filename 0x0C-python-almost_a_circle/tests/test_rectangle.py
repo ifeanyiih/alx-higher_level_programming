@@ -10,6 +10,7 @@ Imports:
 """
 
 import unittest
+import os
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -111,3 +112,22 @@ class RectangleTestCase(unittest.TestCase):
         obj = rect.to_dictionary()
         self.assertTrue(obj ==
                         {'x': 0, 'y': 0, 'width': 22, 'height': 30, 'id': 77})
+        self.assertEqual(type(obj), dict)
+
+    def test_save_to_file_method_on_Rectangle(self):
+        """tests the save_to_file method on Rectangle class"""
+        r1 = Rectangle(20, 30)
+        r2 = Rectangle(30, 50, 5, 15)
+        list_obj_in = [r1, r2]
+        self.assertEqual(Rectangle.save_to_file(list_obj_in), None)
+        list_obj_out = Rectangle.load_from_file()
+        self.assertEqual(list_obj_in[0].x, list_obj_out[0].x)
+
+        self.assertEqual(Rectangle.save_to_file(None), None)
+        self.assertEqual(Rectangle.load_from_file(), [])
+        self.assertEqual(Rectangle.save_to_file([]), None)
+        self.assertEqual(Rectangle.load_from_file(), [])
+
+        Rectangle.save_to_file([])
+        self.assertEqual(Rectangle.load_from_file(), None)
+        self.assertTrue(os.path.exists("Rectangle.json"))
