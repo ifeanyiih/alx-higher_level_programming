@@ -58,10 +58,22 @@ class RectangleTestCase(unittest.TestCase):
         self.assertRaises(ValueError, Rectangle, 20, 0)
         self.assertRaises(ValueError, Rectangle, 20, 30, -5)
         self.assertRaises(ValueError, Rectangle, 20, 30, 5, -3)
+        self.assertRaises(ValueError, Rectangle, -30, 30)
+        self.assertRaises(ValueError, Rectangle, 30, -30)
 
     def test_Rectangle_display(self):
         """test the the display method works properly"""
         rect = Rectangle(5, 7)
+        self.assertEqual(rect.display(), None)
+        self.assertEqual(rect.x, 0)
+        self.assertEqual(rect.y, 0)
+        
+        rect = Rectangle(5, 7, 8)
+        self.assertEqual(rect.display(), None)
+        self.assertEqual(rect.x, 8)
+        self.assertEqual(rect.y, 0)
+
+        rect = Rectangle(5, 6, 7, 8)
         self.assertEqual(rect.display(), None)
 
     def test_the__str__method(self):
