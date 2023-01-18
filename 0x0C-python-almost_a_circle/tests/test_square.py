@@ -35,6 +35,15 @@ class SquareTestCase(unittest.TestCase):
         self.assertEqual(sq.height, 40)
         self.assertEqual(sq.id, 58)
 
+        sq = Square(10, 2)
+        self.assertEqual(sq.size, 10)
+        self.assertEqual(sq.x, 2)
+
+        sq = Square(10, 2, 8)
+        self.assertEqual(sq.size, 10)
+        self.assertEqual(sq.x, 2)
+        self.assertEqual(sq.y, 8)
+
     def test_that_instance_raises_right_error(self):
         """test that instance raises the right errors"""
         self.assertRaises(TypeError, Square, "23")
@@ -82,3 +91,37 @@ class SquareTestCase(unittest.TestCase):
         sq = Square(33, id=24)
         ob = sq.to_dictionary()
         self.assertTrue(ob == {'id': 24, 'size': 33, 'x': 0, 'y': 0})
+
+    def test_Square_create_method(self):
+        """tests the Square.create instance method"""
+        sq = Square.create(**{'id': 89})
+        self.assertEqual(sq.id, 89)
+
+        sq = Square.create(**{'id': 89, 'size': 40})
+        self.assertEqual(sq.id, 89)
+        self.assertEqual(sq.size, 40)
+
+        sq = Square.create(**{'id': 89, 'size': 1, 'x': 2})
+        self.assertEqual(sq.id, 89)
+        self.assertEqual(sq.size, 1)
+        self.assertEqual(sq.x, 2)
+
+        sq = Square.create(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
+        self.assertEqual(sq.id, 89)
+        self.assertEqual(sq.size, 1)
+        self.assertEqual(sq.x, 2)
+        self.assertEqual(sq.y, 3)
+
+    def test_Square_save_to_file_method(self):
+        """tests the save_to file class method"""
+        self.assertEqual(Square.load_from_file(), [])
+
+        self.assertEqual(Square.save_to_file(None), None)
+        self.assertEqual(Square.save_to_file([]), None)
+
+        sq1 = Square(40, 2, 5, 88)
+        sq2 = Square(44, 1, 0, 43)
+
+        self.assertEqual(Square.save_to_file([sq1, sq2]), None)
+        out = Square.load_from_file()
+        self.assertEqual(out[0].size, sq1.size)
