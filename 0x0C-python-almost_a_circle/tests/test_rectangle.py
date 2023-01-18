@@ -128,5 +128,7 @@ class RectangleTestCase(unittest.TestCase):
         self.assertEqual(Rectangle.save_to_file([]), None)
         self.assertEqual(Rectangle.load_from_file(), [])
 
-        Rectangle.save_to_file([])
+        self.assertEqual(Rectangle.save_to_file([]), None)
         self.assertTrue(os.path.exists("Rectangle.json"))
+        self.assertTrue(Rectangle.save_to_file)
+        self.assertIsNone(Rectangle.save_to_file([]))
