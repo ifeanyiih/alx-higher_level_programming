@@ -123,3 +123,9 @@ class SquareTestCase(unittest.TestCase):
         self.assertEqual(Square.save_to_file([sq1, sq2]), None)
         out = Square.load_from_file()
         self.assertEqual(out[0].size, sq1.size)
+
+        Square.save_to_file(None)
+        self.assertEqual(Square.load_from_file(), [])
+
+        Square.save_to_file([])
+        self.assertEqual(Square.load_from_file(), [])
