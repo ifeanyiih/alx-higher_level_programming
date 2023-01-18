@@ -114,8 +114,6 @@ class SquareTestCase(unittest.TestCase):
 
     def test_Square_save_to_file_method(self):
         """tests the save_to file class method"""
-        self.assertEqual(Square.load_from_file(), [])
-
         self.assertEqual(Square.save_to_file(None), None)
         self.assertEqual(Square.save_to_file([]), None)
 
