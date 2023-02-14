@@ -53,6 +53,6 @@ UNLOCK TABLES;
 
 -- Dump completed on 2017-02-21  7:31:42
 
-SELECT DISTINCT city, AVG(value) AS avg_temp FROM temperatures
+SELECT city, AVG(value) AS avg_temp FROM temperatures
 GROUP BY city
 ORDER BY avg_temp DESC;
