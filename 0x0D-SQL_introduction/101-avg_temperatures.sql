@@ -4,7 +4,6 @@
 -- ------------------------------------------------------
 -- Server version	5.5.54-0ubuntu0.14.04.1
 
-USE hbtn_0c_0;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
