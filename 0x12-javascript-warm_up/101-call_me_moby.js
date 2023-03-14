@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 function callMeMoby (count, func) {
-  while (count) {
+  while (count > 0) {
     func();
     --count;
   }
