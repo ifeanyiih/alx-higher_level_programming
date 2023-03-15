@@ -19,7 +19,7 @@ if (argv.length === 3) {
           if (err) console.log(err);
 
           fs.write(wfd, buffer.toString('utf-8'), (err, written, string) => {
-            if (err) console.log(err);
+            if (err) throw err;
           });
         });
       });
