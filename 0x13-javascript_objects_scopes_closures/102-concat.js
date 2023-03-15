@@ -4,21 +4,25 @@ const fs = require('fs');
 
 const argv = process.argv.slice(2);
 
-if (argv[0] !== undefined) {
-  for (const path of argv) {
-    fs.stat(path, function (error, stats) {
-      if (error) console.log(error);
-      // 'r' specifies read mode
-      fs.open(path, 'r', (error, fd) => {
-        if (error) console.log(error);
-        const buffer = Buffer.alloc(stats.size);
-        fs.read(fd, buffer, 0, buffer.length,
-          null, (error, bytesRead, buffer) => {
-            if (error) console.log(error);
-            const data = buffer.toString('utf8');
-            console.log(data);
-          });
+fs.open(argv[2], 'a', (err, wfd) => {
+  if (err) console.log(err);
+  fs.open(argv[0], 'r', (err, fd) => {
+    if (err) console.log(err);
+    fs.read(fd, (err, bytesRead, buffer) => {
+      if (err) console.log(err);
+      fs.write(wfd, buffer, (err, written, string) => {
+        if (err) console.log(err);
       });
     });
-  }
-}
+  });
+
+  fs.open(argv[1], 'r', (err, fd) => {
+    if (err) console.log(err);
+    fs.read(fd, (err, bytesRead, buffer) => {
+      if (err) console.log(err);
+      fs.write(wfd, buffer, (err, written, string) => {
+        if (err) console.log(err);
+      });
+    });
+  });
+});
