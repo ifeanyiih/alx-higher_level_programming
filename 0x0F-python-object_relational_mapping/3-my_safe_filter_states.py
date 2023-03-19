@@ -33,5 +33,5 @@ def listStates(uname, passwd, dbname, uinput):
 
 if __name__ == "__main__":
     uname, passwd, dbname, uinput = sys.argv[1:]
-    uinput = uinput.strip("';*=")
+    uinput = uinput.strip("';*= ")
     listStates(uname, passwd, dbname, uinput)
