@@ -33,5 +33,7 @@ def listStates(uname, passwd, dbname, uinput):
 
 if __name__ == "__main__":
     uname, passwd, dbname, uinput = sys.argv[1:]
-    uinput = uinput.strip("';*= ")
+    uinput = uinput.split(' ')
+    uinput = ''.join(uinput).strip("';=\"")
+    uinput = uinput.replace('*', '').replace(';', '')
     listStates(uname, passwd, dbname, uinput)
