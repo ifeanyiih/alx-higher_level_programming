@@ -24,7 +24,8 @@ def listStates(uname, passwd, dbname):
                          passwd=passwd, db=dbname, port=3306)
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE"
-                " name LIKE 'N%' ORDER BY states.id ASC")
+                " REGEXP_LIKE(name, '^N' COLLATE"
+                " utf8mb4_0900_as_cs) ORDER BY states.id ASC")
     rows = cur.fetchall()
     for row in rows:
         print(row)
