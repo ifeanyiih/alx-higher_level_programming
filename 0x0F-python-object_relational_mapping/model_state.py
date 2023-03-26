@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""
-This Module contains a python file that contains the class definition of a
-State and an instance Base = declarative_base().
-This module would prove my understanding of a creating Objects
-Maps using sqlalchemy.
+"""Write a python file that contains the class definition of a State
+and an instance Base = declarative_base():
+State class:
+inherits from Base Tips
+links to the MySQL table states
+class attribute id that represents a column of an auto-generated,
+unique integer, cannot be null and is a primary key
+class attribute name that represents a column of a string
+with maximum 128 characters and cannot be null
+WARNING: all classes who inherit from Base must be imported
+before calling Base.metadata.create_all(engine)
 """
 
 from sqlalchemy.orm import declarative_state
@@ -15,6 +21,12 @@ Base = declarative_base()
 
 class State(Base):
     """Declares the state table
+    State Class that inherits from base linking to the states table
+    class attribute id that represents a column of an auto-generated,
+    unique integer, can't be null and is a primary key
+    class attribute name that represents a column of a string
+    with maximum 128 characters and can't be null
+
     Attributes:
         id (int): the class attribute
         name (str): class attribute
