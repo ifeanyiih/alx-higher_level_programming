@@ -33,3 +33,6 @@ if __name__ == '__main__':
     first = session.query(State).order_by(State.id).first()
     if first:
         print(f"{first.id}: {first.name}")
+    else:
+        print("Nothing")
+        print()
