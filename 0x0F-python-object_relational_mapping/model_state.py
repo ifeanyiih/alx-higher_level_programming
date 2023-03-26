@@ -1,15 +1,24 @@
 #!/usr/bin/python3
-"""a python file that contains the class definition of a
-State and an instance Base = declarative_base()"""
+
+"""
+This Module contains a python file that contains the class definition of a
+State and an instance Base = declarative_base()
+"""
+
 
 from sqlalchemy.orm import declarative_state
 from sqlalchemy import Column, Integer, String
+
 
 Base = declarative_base()
 
 
 class State(Base):
-    """declares the state table"""
+    """Declares the state table
+    Attributes:
+        id (int): the class attribute
+        name (str): class attribute
+    """
     __tablename___ = "states"
 
     id = Column(Integer, primary_key=True)
