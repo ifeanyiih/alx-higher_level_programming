@@ -33,5 +33,4 @@ if __name__ == '__main__':
     state = State(name="Louisiana")
     session.add(state)
     session.commit()
-    for instance in session.query(State).order_by(State.id).all():
-        print(f"{instance.id}: {instance.name}")
+    print(state.id)
