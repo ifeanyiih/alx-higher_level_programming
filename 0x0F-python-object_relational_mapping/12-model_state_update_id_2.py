@@ -23,7 +23,7 @@ from urllib.parse import quote_plus
 
 
 if __name__ == '__main__':
-    user, passwd, db, name = sys.argv[1:]
+    user, passwd, db = sys.argv[1:]
     engine = create_engine(f"mysql+mysqldb"
                            f"://{user}:{quote_plus(passwd)}"
                            f"@localhost:3306/{db}", echo=False)
