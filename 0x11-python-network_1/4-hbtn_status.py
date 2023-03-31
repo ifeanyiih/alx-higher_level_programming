@@ -12,7 +12,7 @@ import requests
 
 if __name__ == "__main__":
     req = requests.get('https://alx-intranet.hbtn.io/status')
-    res =f"""Body response:
+    res = f"""Body response:
     - type: {type(req.text)}
     - content: {req.text}"""
     print(res)
