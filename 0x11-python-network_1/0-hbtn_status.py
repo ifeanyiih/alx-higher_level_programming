@@ -4,7 +4,8 @@ This module contains a function which fetches data
 from https://alx-intranet.hbtn.io/status and
 displays the body of the response
 """
-import urllib.request
+
+from urllib import request
 
 
 def printBodyResponse(url):
@@ -13,7 +14,7 @@ def printBodyResponse(url):
     Args:
         url (str): The url to fetch from
     """
-    with urllib.request.urlopen(url) as response:
+    with request.urlopen(url) as response:
         output = f"""Body response:
     - type: {type(response.read())}
     - content: {response.read()}
