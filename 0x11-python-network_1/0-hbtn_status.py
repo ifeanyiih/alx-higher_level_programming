@@ -18,7 +18,7 @@ def printBodyResponse(url):
         output = f"""Body response:
     - type: {type(response.read())}
     - content: {response.read()}
-    - utf8 content: {response.read().decode('utf8')}"""
+    - utf8 content: {response.read().decode('utf-8')}"""
         print(output)
 
 

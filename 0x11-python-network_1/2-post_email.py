@@ -22,4 +22,4 @@ if __name__ == "__main__":
     data = data.encode('utf8')
     req = request.Request(url, data)
     with request.urlopen(req) as response:
-        print(response.read().decode('utf8'))
+        print(response.read().decode('utf-8'))
