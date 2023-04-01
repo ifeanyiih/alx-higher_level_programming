@@ -1,3 +1,3 @@
 #!/bin/bash
 # A Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
-curl -I --no-progress-meter $1 | wc -c | cat
+curl --no-progress-meter $1 | wc -c | cat
