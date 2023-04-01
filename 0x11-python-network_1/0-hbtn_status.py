@@ -5,7 +5,7 @@ from https://alx-intranet.hbtn.io/status and
 displays the body of the response
 """
 
-import urllib
+import urllib.request
 
 
 def printBodyResponse(url):
