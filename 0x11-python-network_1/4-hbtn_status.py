@@ -10,8 +10,8 @@ example (tabulation before -)
 
 import requests
 
+
 if __name__ == "__main__":
     req = requests.get('https://alx-intranet.hbtn.io/status')
-    print("Body response:")
-    print(f"- type: {type(req.text)}")
-    print(f"- content: {req.text}")
+    print(f"Body response:\n"
+          f"     - type: {type(req.text)}\n     - content: {req.text}\n\n")
