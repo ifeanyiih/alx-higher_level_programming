@@ -23,4 +23,7 @@ if __name__ == "__main__":
     headers["accept"] = "application/vnd.github+json"
     res = requests.get(url, headers=headers)
     json = res.json()
-    print(json['id'])
+    if json.get('id'):
+        print(json.get('id'))
+    else:
+        print("None")
