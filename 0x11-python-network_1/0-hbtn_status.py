@@ -2,7 +2,15 @@
 """
 This module contains a function which fetches data
 from https://alx-intranet.hbtn.io/status and
-displays the body of the response
+displays the body of the response.
+
+Write a Python script that fetches https://alx-intranet.hbtn.io/status
+
+You must use the package urllib
+You are not allowed to import any packages other than urllib
+The body of the response must be displayed like the following example
+(tabulation before -)
+You must use a with statement
 """
 
 import urllib.request
