@@ -32,4 +32,4 @@ if __name__ == "__main__":
     if int(req.status_code) == 204:
         print("No result")
     else:
-        print(f"[{json[0]["id"]}] {json[0]["name"]}")
+        print(f"[{json.get("id")}] {json.get("name")}")
