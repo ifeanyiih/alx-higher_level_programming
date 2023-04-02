@@ -36,6 +36,6 @@ def find_peak(list_of_integers):
                 return peak
         else:
             if (list_of_integers[i] > list_of_integers[i + 1]) and\
-            (list_of_integers[i] > list_of_integers[i - 1]):
+                 (list_of_integers[i] > list_of_integers[i - 1]):
                 peak = list_of_integers[i]
                 return peak
