@@ -1,3 +1,3 @@
 #!/bin/bash
 # a Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response
-curl -sI "$1" | grep "HTTP*"| cut -d " " -f 2| cat
+curl -o /dev/null -sw "%{http_code}" "$1"
