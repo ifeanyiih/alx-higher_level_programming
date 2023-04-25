@@ -16,5 +16,5 @@ request(url, function (error, response, body) {
       if (todo.completed) taskobj[todo.userId]++;
     }
   }
-  console.log(taskobj);
+  if (Object.keys(taskobj).length > 0) console.log(taskobj);
 });
