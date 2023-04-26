@@ -16,7 +16,7 @@ request(url, function (error, response, body) {
       if (todo.completed) taskobj[todo.userId]++;
     }
   }
-  for (const key in Object.keys(taskobj)) {
+  for (const key of Object.keys(taskobj)) {
     if (taskobj[key] === 0) delete taskobj[key];
   }
   console.log(taskobj);
