@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const value = Input.val();
     const url = 'https://hellosalut.stefanbohacek.dev/?lang=' + value;
     $.get(url, function (data, status) {
-      console.log(data);
+        display.text(data.hello);
     });
   });
 });
